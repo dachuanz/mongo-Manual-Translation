@@ -26,6 +26,16 @@
 
 <p><strong>欢迎来到Mongodb 手册。</strong> Mongodb 是易于开发和伸缩的开源，基于文档结构数据库。</p>
 
+<blockquote>
+<p>MongoDB使用了BSON这种结构来存储数据和网络数据交换。把这种格式转化成一文档这个概念(Document)，因为BSON是schema-free的，所以在MongoDB中所对应的文档也有这个特征，这里的一个Document也可以理解成关系数据库中的一条记录(Record)，只是这里的Document的变化更丰富一些，如Document可以嵌套。
+MongoDB以BSON做为其存储结构的一种重要原因是其可遍历性。</p>
+
+<h2>
+<a id="实例" class="anchor" href="#%E5%AE%9E%E4%BE%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>实例</h2>
+
+<p><a href="/example/example.md">example</a></p>
+</blockquote>
+
 <h2>
 <a id="入门" class="anchor" href="#%E5%85%A5%E9%97%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>入门</h2>
 
@@ -41,7 +51,19 @@
 <a id="java" class="anchor" href="#java" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java</h3>
 
 <h3>
-<a id="c-sharp" class="anchor" href="#c-sharp" aria-hidden="true"><span class="octicon octicon-link"></span></a>C-sharp</h3>
+<a id="nodejs" class="anchor" href="#nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Node.js</h3>
+
+<h3>
+<a id="c" class="anchor" href="#c" aria-hidden="true"><span class="octicon octicon-link"></span></a>C#</h3>
+
+<h2>
+<a id="mongodb-crud-introduction" class="anchor" href="#mongodb-crud-introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>MongoDB CRUD Introduction</h2>
+
+<blockquote>
+<p>MongoDB stores data in the form of documents, which are JSON-like field and value pairs. Documents are analogous to structures in programming languages that associate keys with values (e.g. dictionaries, hashes, maps, and associative arrays). Formally, MongoDB documents are BSON documents. BSON is a binary representation of JSON with additional type information. In the documents, the value of a field can be any of the BSON data types, including other documents, arrays, and arrays of documents. For more information, see Documents.</p>
+</blockquote>
+
+<p>MongoDB存储文档形式的数据。文档形式近似<a href="http://www.json.org">JSON</a>.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/dachuanz/mongo-Manual-Translation">Mongo-manual-translation</a> is maintained by <a href="https://github.com/dachuanz">dachuanz</a>.</span>

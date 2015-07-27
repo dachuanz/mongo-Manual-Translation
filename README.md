@@ -18,6 +18,7 @@ MongoDB提供如下版本的入门指南：
 ###Java 
 ###Node.js 
 ### C\# ###
+###C\+\+
 
 ##MongoDB CRUD Introduction##
 >MongoDB stores data in the form of documents, which are JSON-like field and value pairs. Documents are analogous to structures in programming languages that associate keys with values (e.g. dictionaries, hashes, maps, and associative arrays). Formally, MongoDB documents are BSON documents. BSON is a binary representation of JSON with additional type information. In the documents, the value of a field can be any of the BSON data types, including other documents, arrays, and arrays of documents. For more information, see Documents.

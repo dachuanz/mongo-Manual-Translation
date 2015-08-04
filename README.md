@@ -14,6 +14,11 @@ MongoDB以BSON做为其存储结构的一种重要原因是其可遍历性。
 
 MongoDB提供如下版本的入门指南：
 ###Mongo Shell##
+>Once you have installed and have started MongoDB, connect the mongo shell to your running MongoDB instance. Ensure that MongoDB is running before attempting to launch the mongo shell.
+
+>On the same system where the MongoDB is running, open a terminal window (or a command prompt for Windows) and run the mongo shell with the following command:
+
+
 ###Python 
 ###Java 
 ###Node.js 

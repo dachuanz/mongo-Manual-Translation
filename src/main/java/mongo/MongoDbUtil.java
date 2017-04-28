@@ -26,7 +26,12 @@ import com.mongodb.client.gridfs.GridFSBuckets;
 import com.mongodb.client.gridfs.GridFSDownloadStream;
 import com.mongodb.client.gridfs.model.GridFSFile;
 
-
+/**
+ * 
+ * @author 张大川
+ *
+ *         mongo 数据库连接
+ */
 public class MongoDbUtil {
 	private MongoDbUtil() {
 	}
@@ -37,7 +42,7 @@ public class MongoDbUtil {
 		try {
 			URL url = MongoDbUtil.class.getClassLoader().getResource("mongo_db.properties");
 			if (url != null) {
-				log.info("Found 'mongo_db.properties' file in local classpath");
+				log.debug("Found 'mongo_db.properties' file in local classpath");
 				InputStream in = url.openStream();
 				try {
 					properties.load(in);
@@ -46,7 +51,7 @@ public class MongoDbUtil {
 				}
 			}
 		} catch (IOException e) {
-			log.info("Could not load 'mongo_db.properties' file from local classpath: " + e);
+			log.debug("Could not load 'mongo_db.properties' file from local classpath: " + e);
 		}
 	}
 
@@ -66,6 +71,7 @@ public class MongoDbUtil {
 		// author
 		public static List<MongoCredential> credential = new ArrayList<>();
 		static {
+			log.debug(properties.getProperty("mongo_ip"));
 			ip = properties.getProperty("mongo_ip");
 			database = properties.getProperty("mongo_database");
 
@@ -111,7 +117,7 @@ public class MongoDbUtil {
 	}
 
 	/**
-	 * upload file to mongo
+	 * 上传文件到 mongo
 	 * 
 	 * @param filename
 	 * @param in
@@ -233,8 +239,6 @@ public class MongoDbUtil {
 		downloadFile(objectId, file);
 	}
 
-	
-
 	/**
 	 * download file for gridfs use stream 如果一次性读取所有字节，大于chunk
 	 * size的可能会出现乱序，导致文件损坏
@@ -271,7 +275,7 @@ public class MongoDbUtil {
 	}
 
 	/**
-	 * download file for gridfs use stream
+	 * 下载文件
 	 * 
 	 * @param objectId
 	 * @param fileName
